@@ -3,14 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./lib/webgl-utils.js"></script>
-    <script src="./lib/initShaders.js"></script>
-    <script src="./lib/MV.js"></script>
     <!-- 着色器 -->
-    <script id="vertex-shader" type="x-shader/x-fragment">
+    <script id="vertex-shader" type="x-shader/x-vertex">
         attribute vec4 vPosition;
         void main() {
-            gl_PointSize = 1.0;
             gl_Position = vPosition;
         }
     </script>
@@ -20,6 +16,9 @@
             gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
         }
     </script>
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/initShaders.js"></script>
+    <script src="./lib/MV.js"></script>
     <script src="./main.js"></script>
 </head>
 <body onload="main()">
